@@ -22,7 +22,7 @@ public class LocalizationTests extends BaseTest{
     })
     @DisplayName("Добавление товара в избранное")
     protected void addingAnItemToFavoritesTest() {
-        mainPage.localizationСhange("Выбран язык: Русский", "English")
+        mainPage.localizationСhange("Current language English", "English")
                 .checkingLocalizationLanguageChange("English");
 
     }
