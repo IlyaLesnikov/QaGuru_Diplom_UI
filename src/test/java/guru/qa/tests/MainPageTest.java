@@ -5,6 +5,7 @@ import guru.qa.pages.AuthPage;
 import guru.qa.pages.MainPage;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.checkerframework.checker.units.qual.A;
@@ -28,56 +29,48 @@ public class MainPageTest extends BaseTest {
     @Feature("Авторизация")
     @Story("Я как пользователь хочу иметь авторизоваться в личнокм кабинете чтобы работать с моими продуктами банка")
     @Test
-    @Tags({
-            @Tag("SMOKE"),
-            @Tag("WEB")
-    })
+    @Tags({@Tag("SMOKE"), @Tag("WEB")})
     @DisplayName("Открытие авторизации в личном кабинете \"Интернет банк\"")
     protected void openingOfAuthorizationInThePersonalAccountOfTheInternetBankTest() {
-        mainPage.openingTheDropDownListForChoosingAPersonalAccount()
-                .openingTheAuthorizationOfTheInternetBank();
-        authPage.checkingTheOpeningOfTheAuthorizationForm("Вход в Тинькофф");
+        step("Открытие авторизации", () -> mainPage.openingTheDropDownListForChoosingAPersonalAccount()
+                .openingTheAuthorizationOfTheInternetBank());
+        step("Проверка открытия веб-формы авторизации", () -> authPage.checkingTheOpeningOfTheAuthorizationForm("Вход в Тинькофф"));
     }
     @Epic("Разработка авторизации")
     @Feature("Авторизация")
     @Story("Я как пользователь хочу иметь авторизоваться в личнокм кабинете чтобы работать с моими продуктами банка")
     @Test
-    @Tags({
-            @Tag("SMOKE"),
-            @Tag("WEB")
+    @Tags({@Tag("SMOKE"), @Tag("WEB")
     })
     @DisplayName("Открытие авторизации в личном кабинете \"Тинькофф бизнес\"")
     protected void openingAuthorizationInTheTinkoffBusinessPersonalAccountTest() {
-        mainPage.openingTheDropDownListForChoosingAPersonalAccount()
-                .openingAuthorizationTinkoffBusiness();
-        authPage.checkingTheOpeningOfTheAuthorizationForm("Вход в Тинькофф");
+        step("Открытие авторизации", () -> mainPage.openingTheDropDownListForChoosingAPersonalAccount()
+                .openingAuthorizationTinkoffBusiness());
+        step("Проверка открытия веб-формы авторизации", () -> authPage.checkingTheOpeningOfTheAuthorizationForm("Вход в Тинькофф"));
     }
     @Epic("Разработка авторизации")
     @Feature("Авторизация")
     @Story("Я как пользователь хочу иметь авторизоваться в личнокм кабинете чтобы работать с моими продуктами банка")
     @Test
-    @Tags({
-            @Tag("SMOKE"),
-            @Tag("WEB")
+    @Tags({@Tag("SMOKE"), @Tag("WEB")
     })
     @DisplayName("Открытие авторизации в личном кабинете \"Инвестиции\"")
     protected void openingAuthorizationInThePersonalAccountInvestmentsTest() {
-        mainPage.openingTheDropDownListForChoosingAPersonalAccount()
-                .openingAnInvestmentAuthorization();
-        authPage.checkingTheOpeningOfTheAuthorizationForm("Вход в Тинькофф");
+        step("Открытие авторизации", () -> mainPage.openingTheDropDownListForChoosingAPersonalAccount()
+                .openingAnInvestmentAuthorization());
+        step("Проверка открытия веб-формы авторизации", () -> authPage.checkingTheOpeningOfTheAuthorizationForm("Вход в Тинькофф"));
     }
     @Epic("Разработка авторизации")
     @Feature("Авторизация")
     @Story("Я как пользователь хочу иметь авторизоваться в личнокм кабинете чтобы работать с моими продуктами банка")
     @Test
-    @Tags({
-            @Tag("SMOKE"),
-            @Tag("WEB")
+    @Tags({@Tag("SMOKE"), @Tag("WEB")
     })
     @DisplayName("Открытие авторизации в личном кабинете \"Тинькофф мобайл\"")
     protected void openingAuthorizationInThePersonalAccountOfTinkoffMobileTest() {
-        mainPage.openingTheDropDownListForChoosingAPersonalAccount()
-                .openingAuthorizationInTinkoffMobile();
-        authPage.checkingTheOpeningOfTheAuthorizationForm("Вход в Мобайл");
+        step("Открытие авторизации", () -> mainPage.openingTheDropDownListForChoosingAPersonalAccount()
+                .openingAuthorizationInTinkoffMobile());
+
+        step("Проверка открытия веб-формы авторизации", () -> authPage.checkingTheOpeningOfTheAuthorizationForm("Вход в Мобайл"));
     }
 }
