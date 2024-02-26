@@ -93,7 +93,7 @@ main -browser=${BROWSER}
 ## <img src="media/logo/allure.svg" title="Allure TestOps" width="4%"/> Пример [Allure-отчета](https://jenkins.autotests.cloud/job/023_diplom_lia_lesnikov_UI/15/allure/)
 В отчете отображены автотесты с прогона и их статусы
 <p align="center">
-<img title="Allure Overview" src="media/screen/allure-report.png">
+<img title="Allure Overview" src="media/screen/allure_report.png">
 </p>
 
 ## Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/4079/dashboards)
