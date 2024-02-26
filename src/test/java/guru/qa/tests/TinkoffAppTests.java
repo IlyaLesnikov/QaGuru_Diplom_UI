@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
-
+@DisplayName("Тесты к сервису скачивания приложения")
 public class TinkoffAppTests extends BaseTest{
     TinkoffAppPage tinkoffAppPage = new TinkoffAppPage();
     @Epic("Разработка авторизации")
