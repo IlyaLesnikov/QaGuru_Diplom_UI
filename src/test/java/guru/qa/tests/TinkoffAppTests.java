@@ -23,6 +23,6 @@ public class TinkoffAppTests extends BaseTest{
         step("Открытие сайта для установки приложения", () -> tinkoffAppPage.openWebForm()
                 .openUserIos()
                 .appGalleryButtonClick());
-        step("Проверка отображения кнопки \"Установить\"", () -> tinkoffAppPage.assertButton("Установить"));
+        step("Проверка отображения кнопки \"Установить\"", () -> tinkoffAppPage.assertURL("https://appgallery.huawei.com/#/app/C101291451"));
     }
 }

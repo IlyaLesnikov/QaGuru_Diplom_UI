@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverConditions.url;
 
 public class TinkoffAppPage {
     private final SelenideElement userIos = $("[data-guid='ca8efef8-8069-409c-add5-3200bf1efc28'] [data-test='clickableArea slideLink']");
@@ -27,9 +28,9 @@ public class TinkoffAppPage {
 
         return this;
     }
-    public void assertButton(String value) {
+    public void assertURL(String url) {
         switchTo().window(1);
-        installTheApplication.shouldHave(text(value));
+        webdriver().shouldHave(url(url));
         switchTo().window(0);
     }
 }
