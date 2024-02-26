@@ -11,9 +11,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.Map;
 
-import static com.codeborne.selenide.Selenide.open;
-import static io.qameta.allure.Allure.step;
-
 abstract public class BaseTest {
     @BeforeAll
     public static void setUp() {
@@ -21,8 +18,7 @@ abstract public class BaseTest {
         Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.baseUrl = "https://www.tinkoff.ru/";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-        //Configuration.remote = System.getProperty("remoteUrl", "https://{}");
+        //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
         Configuration.pageLoadStrategy = "eager";
         Configuration.holdBrowserOpen = true;
 

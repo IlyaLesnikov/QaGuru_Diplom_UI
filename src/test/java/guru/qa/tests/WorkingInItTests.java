@@ -5,9 +5,9 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.*;
-
 import static io.qameta.allure.Allure.step;
 
+@DisplayName("Тесты к функционалу сервиса \"Работа в ИТ\"")
 public class WorkingInItTests extends BaseTest {
     WorkingInItPage workingInItPage = new WorkingInItPage();
     @Epic("Разработка сервиса \"Работа в ИТ\"")

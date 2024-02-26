@@ -5,10 +5,8 @@ import guru.qa.pages.AuthPage;
 import guru.qa.pages.MainPage;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
-import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.checkerframework.checker.units.qual.A;
 import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -16,7 +14,7 @@ import static io.qameta.allure.Allure.step;
 
 
 @DisplayName("Тесты к функционалу главной страницы")
-public class MainPageTest extends BaseTest {
+public class MainPageTests extends BaseTest {
     MainPage mainPage = new MainPage();
     AuthPage authPage = new AuthPage();
 
