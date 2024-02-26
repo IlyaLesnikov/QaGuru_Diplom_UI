@@ -119,5 +119,5 @@ main -browser=${BROWSER}
 
 К каждому тесту в отчете прилагается видео прогона.
 <p align="center">
-  <img title="Selenoid Video" src="media/">
+  <img title="Selenoid Video" src="media/gif/selenoid.gif">
 </p>
