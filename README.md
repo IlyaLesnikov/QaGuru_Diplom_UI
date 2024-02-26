@@ -72,10 +72,6 @@ main -browser=${BROWSER}
 -DbrowserSize=${BROWSER_SIZE}
 -DbaseURL="${BASE_URL}"
 ```
-## <img src="media/logo/jenkins.svg" title="Allure TestOps" width="4%"/> Созданная джоба в [Jenkins](https://jenkins.autotests.cloud/job/023_diplom_lia_lesnikov_UI/)
-<p align="center">
-<img title="allure-report" src="media/screen/JenkinsProject.png">
-</p>
 
 ### Параметры сборки
 В сборку были добавлены следующие параметры:
