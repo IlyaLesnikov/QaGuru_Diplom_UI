@@ -29,7 +29,7 @@ abstract public class BaseTest {
         ));
         Configuration.browserCapabilities = capabilities;
     }
-        @BeforeEach
+    @BeforeEach
     public void addAllureListener() {
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
