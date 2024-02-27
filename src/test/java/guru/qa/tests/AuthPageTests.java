@@ -55,7 +55,7 @@ public class AuthPageTests extends BaseTest {
     @Tags({@Tag("SMOKE"), @Tag("WEB")})
     @DisplayName("Закрытие авторизации")
     protected void closingAuthorization() {
-        step("Авторизация с несуществующем номером телефона в поле \"Телефон\"", () -> {
+        step("Закрытие веб-формы авторизации", () -> {
             mainPage.openWebForm("https://www.tinkoff.ru/")
                     .openingTheDropDownListForChoosingAPersonalAccount()
                     .openingTheAuthorizationOfTheInternetBank();
