@@ -6,7 +6,6 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -17,10 +16,10 @@ public class TinkoffAppTests extends BaseTest{
     @Feature("Авторизация")
     @Story("Я как пользователь хочу иметь авторизоваться в личнокм кабинете чтобы работать с моими продуктами банка")
     @Test
-    @Tags({@Tag("SMOKE"), @Tag("WEB")})
+    @Tag("SMOKE")
     @DisplayName("Открытие авторизации в личном кабинете \"Тинькофф бизнес\"")
     protected void openingAuthorizationInTheTinkoffBusinessPersonalAccountTest() {
-        step("Открытие сайта для установки приложения", () -> tinkoffAppPage.openWebForm()
+        step("Открытие сайта для установки приложения", () -> tinkoffAppPage.openDownloadAppWebForm()
                 .openUserIos()
                 .appGalleryButtonClick());
         step("Проверка отображения кнопки \"Установить\"", () -> tinkoffAppPage.assertURL("https://appgallery.huawei.com/#/app/C101291451"));

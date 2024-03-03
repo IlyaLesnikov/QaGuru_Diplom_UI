@@ -1,8 +1,6 @@
 package guru.qa.pages;
 
 import com.codeborne.selenide.SelenideElement;
-
-import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverConditions.url;
 
@@ -11,7 +9,7 @@ public class TinkoffAppPage {
     private final SelenideElement appGalleryButton = $("[data-guid='e6902d52-7ddc-47c7-bec2-8f5eda1e2982'] [class='cb30mZcTA']");
     private final SelenideElement installTheApplication = $("[class='detailheadcard']");
 
-    public TinkoffAppPage openWebForm() {
+    public TinkoffAppPage openDownloadAppWebForm() {
         open("/apps/");
 
         return this;

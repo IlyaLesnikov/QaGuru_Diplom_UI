@@ -14,42 +14,42 @@ public class WorkingInItPage {
     private final SelenideElement dropDownListOfLevel = $("[class='capr4f aapr4f wapr4f iapr4f'] [class='g3nym-+']");
     private final SelenideElement vacancy = $("[class='bOQH4s']");
     private final SelenideElement theRespondButton = $("[data-qa-type='uikit/button']");
-    public WorkingInItPage openWebForm() {
+    public WorkingInItPage openCareerWebForm() {
         step("Открытие страницы", () -> open("/career/it/about/"));
 
         return this;
     }
-    public WorkingInItPage clickingTheViewVacanciesButton() {
+    public WorkingInItPage clickingViewVacanciesButton() {
         theViewVacanciesButton.click();
 
         return this;
     }
-    public WorkingInItPage openingTheDirectionDropDownList (String value) {
+    public WorkingInItPage openingDirectionDropDownList (String value) {
         dropDownListOfDirections.$(byText(value)).click();
 
         return this;
     }
-    public WorkingInItPage openingTheDirectionDropDownListLevel () {
+    public WorkingInItPage openingDirectionDropDownListLevel () {
         dropDownListOfLevel.click();
 
         return this;
     }
-    public WorkingInItPage selectingAValueInTheDirectionDropDownList(String value) {
+    public WorkingInItPage selectingValueInDirectionDropDownList(String value) {
         openDropDownList.$(byText(value)).click();
 
         return this;
     }
-    public WorkingInItPage checkingTheSelectedDirection(String direction) {
+    public WorkingInItPage checkingSelectedDirection(String direction) {
         theChosenDirection.shouldHave(text(direction));
 
         return this;
     }
-    public WorkingInItPage openingAVacancy() {
+    public WorkingInItPage openingVacancy() {
         vacancy.click();
 
         return this;
     }
-    public void checkingForThePresenceOfAButton(String value) {
+    public void checkingForPresenceButton(String value) {
         theRespondButton.$(byText(value))
                 .shouldHave(text(value));
     }
