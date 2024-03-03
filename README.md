@@ -1,6 +1,6 @@
 ## Проект по автоматизации тестирования UI для сайта [АО «Тинькофф Банк»](https://www.tinkoff.ru/)
 
-![sibintek](media/screen/logo.png "Главная страница")
+![logo](media/screen/logo.jpg "Главная страница")
 
 ## Содержание:
 
